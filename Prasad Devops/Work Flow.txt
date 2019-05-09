@@ -1,0 +1,490 @@
+Creating new repo ?
+
+Create repo from webpage 
+$git init 
+Next, initialize Git so you can start using Git commands inside the folder. The folder is now a Git repository.
+
+$git status
+$touch file1 
+$git status 
+$git add file1 
+$git commit -m "firstcommit" file1
+
+Since you haven’t connected to the GitHub repo yet, your computer doesn’t even know this exists. So tell your local repository about it:
+Naveen@DESKTOP-90INCOB MINGW64 ~/Videos (master)
+$ git remote add origin https://github.com/naveenit9999/MyNewRepo-.git
+
+
+Naveen@DESKTOP-90INCOB MINGW64 ~/Videos (master)
+$ git remote -v
+origin  https://github.com/naveenit9999/MyNewRepo-.git (fetch)
+origin  https://github.com/naveenit9999/MyNewRepo-.git (push)
+
+And double check to make sure it knows:
+git remote -v
+
+Finally, it’s the moment you’ve been waiting for. Upload that delicious looking sundae up to the project:
+
+git push
+
+Git Phases
+1) workspace area
+2) staging / index area
+3) Local repo
+
+touch file1
+ls
+git status
+git add file1
+git status
+git commit -m "label" file1
+git status
+git log
+git show cid
+
+----------------
+touch file2 file3
+git add file2 file3 or
+git add * or
+git add . or
+git add -A
+
+git status
+git commit -m "label" 
+git log
+
+
+Create Git Hub Account
+
+git reset --soft cid  (local to staging or index)
+
+git reset HEAD file-name ( staging to workspace)
+
+git reset --mixed cid ( local to workspace)
+
+git reset --hard cid ( file'd deleted)
+
+git clone https://github.com/polarapu/batch42.git
+ls
+cd batch-42
+ls
+touch file1
+ls
+git status
+git add file1
+git status
+git commit -m "label" file1
+git status
+git log
+
+git config --list
+
+git config --global user.name "prasad"
+git config --global user.email "prasad@gmail.com"
+
+git pgit pull
+git push
+
+esc
+:wq!
+
+
+
+=============================================
+06-05-2019
+---------------------------------------
+Branch:
+
+Branch is Copy of the data, When You create New Brnach then 
+Data Will copy from Old branch.
+
+By deafault Branch name is "branch" 
+
+To check branch name or current branch name?
+#git branch
+
+Op:
+Naveen@DESKTOP-90INCOB MINGW64 ~/Videos/Prasad Devops/Devops/batch42 (master)
+$ git branch
+* master
+
+How to create new branch?
+$git branch branch-name
+
+to check current branch name 
+
+$git branch 
+
+create a directory  
+
+$mkdir test1
+$cd test1
+
+how to change branch
+$git checkout destinationbranch name
+
+
+Merge: It will copy data from one branch to another branch
+
+Enter into Destination branch
+
+$ git merge SourceDestinationName 
+
+$ll
+$git log
+
+How to deete branch?
+
+$git branch -d Branchname
+
+Current branch we can't delete.
+
+Ex:$git branch -d master2
+
+How to create branch and Enter into that branch?
+$git checkout -b NewbranchName 
+Ex:$git checkout -b Master2
+
+
+How to upload local branch into central repository 
+
+$git push pathof/C-repo master1 
+
+
+or
+
+$git push origin master2
+
+
+
+21:00
+
+DevOps Training
+
+Branch
+---------
+git branch
+git branch branch-name
+git branch master1
+git branch
+git checckout branch-name
+git checkout master1
+git merge master
+
+git branch -d master1
+
+git checkout -b master2
+
+git push path/of/c-repo master1
+
+git push origin master2
+======================================
+
+21:00
+
+DevOps Training
+
+Branch
+---------
+git branch
+git branch branch-name
+git branch master1
+git branch
+git checckout branch-name
+git checkout master1
+git merge master
+
+git branch -d master1
+
+git checkout -b master2
+
+git push path/of/c-repo master1
+
+git push origin master2
+======================================
+
+
+
+git clone https://github.com/polarapu/batch42.git
+
+cd batch-42
+
+git branch
+
+A) 1
+B) 2
+C) 3
+D) 0
+
+git checkout master2
+
+ls
+git branch
+
+git checkout master
+
+git pull
+
+ls
+
+
+===============================================================
+07-May-2019
+08:00PM IST
+
+How to resolve Conflict files?
+When two diff files having diff data this conflex errors will occur.
+We can't make any changes in files so we have to 
+come out from conflex.
+
+$git merge --abort 
+
+In Industry's Nobody using Auto merging.
+
+Check and contact who has modified files, Ask them to remove unnessary data from
+files and try to merge so that Conflicts will go away.
+--------------------------------------------------------------
+
+--> Stach Memory : (Temporarly Storage Area, It will be in our local machine)
+Generally We have 3 phases, We can only push data to repo
+After completion of this 3 phases.
+
+Purpose : incase your  working on one commit, IF you want to commit any other commit
+
+we can Save our commit in stash memory area by using below command.
+
+$git stash save "labelname" 
+
+How to check stash list ?
+
+$git stash list
+
+$touch file3
+git add. 
+$git stash save "stash3"
+
+$git stash show -p Stash@{1}
+
+How to bring back from stash area to staging area?
+
+$git stash pop ( it will consider Stash@{0} file )
+pop( its Like a Move)
+Apply( Its Like a copying)
+Drop(
+
+
+
+If you want to particular stash file 
+$git stash pop stash@{1}
+$git staus
+$git stash list
+
+
+--->Apply 
+
+It will just copy the files from stash area to index area
+$git stash apply 
+$git stash apply stash@{x}
+
+Drop
+------
+
+It will just delete stash files 
+
+$git stash drop
+$git stash drop stash@{x}
+
+Commands : 
+------------
+git stash list
+git stash save "label"
+git stash list
+git stash show -p stash@{0}
+
+pop, apply, drop
+---------------------
+pop
+-----
+git stash pop
+git stash pop stash@{x}
+
+apply
+-------
+git stash apply
+git stash apply stash@{x}
+
+drop
+------
+git stash drop
+git stash drop stash@{x
+
+==========================================================
+08-May-2019
+Wednesday 
+------------
+TAG
+----
+List of tags ?
+$git tag 
+how to list tag in another way?
+$git tag -l tag1.1
+
+Creating Tag?
+$git tag <tagname>
+
+It will take lastest commit iD will create Tag forthta commit
+$git log --online 
+
+how to check commit id by using tag ID?
+$git show <tagname>
+
+How to delete tag from your local machine?
+$git tag -d <tagname>
+
+$git tag
+
+How to create n number of tags?
+$git tag --online
+$git tag <tagname>  <commitid>
+How to push tag to central repo ?
+$git push origin <tagname>
+
+how to delete tags from central repo ?
+$git push -d tag1.1 tag2.1 tag3.1 
+
+How to delete a branch from central repo ?
+$git push  oraigin -d <branchname>
+
+IGNORE:
+-------
+if you add/modify files those will come to Work space area.
+So we don't want those files in work space area, in this case we 
+have to create hidden filename and add modified/add file names in
+hidden file
+
+$touch vasu venkat 
+$ll
+vasu vekat
+$git status 
+$git add .
+$ git commit -m "modified file"
+$git status 
+
+Create a hiddent file
+
+$vi .gitignore
+vasu 
+venkat 
+:wq!
+$vi vasu 
+Hello Vasu 
+:wq!
+$git status ( here those modified files will not show in work
+space area) 
+-----------------------------------------------
+
+Aliases: This will create alias for big commands 
+--------
+
+$git config --list 
+$git cl
+Creating alias
+$ git config --global alias.cl "config --list"
+ 
+$git branch (original command)
+Need to create alias like this 
+$git b
+
+creating alias
+
+$git config --global alias.b "branch"
+
+$git b
+
+How to remove Alias Commands
+$git config --global --unset alias.b
+$ git b ( It won't work now )
+
+
+How to remove configured username and email 
+$ git config --global --unset user.name
+$ git config --global --unset user.email
+
+
+How to configure username and email ID?
+$ git config --global user.name naveenit9999
+$ git config --global user.email naveenit9999@gmail.com
+
+$ git config --list | grep -e user.name -e user.email
+user.name=naveenit9999
+user.email=naveenit9999@gmail.com
+
+
+commands:08-May-2019
+
+TAG
+-----
+git tag
+git tag tag1.0
+git tag
+git tag -l tag1.1
+
+git show tag1.0
+git tag -d tag1.0
+
+git tag tag1.1 cid
+
+git push origin tag1.1
+
+git push origin -d tag1.1 tag2.1 tag3.1
+
+git push origin -d branch_name
+
+
+Alias
+-----------
+git config --list
+git cl
+git config --global alias.cl "config --list"
+
+git branch
+git b
+git config --global alias.b "branch"
+
+git status
+git s
+git config --global alias.s "status"
+
+git config --global --unset alias.b
+
+
+git config --list
+git config --global user.name "1234"
+git config --list
+
+git config --global --unset "user.name"
+git config --global --unset "user.email"
+
+git config --list
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
